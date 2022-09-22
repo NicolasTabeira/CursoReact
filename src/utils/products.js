@@ -14,12 +14,12 @@ export const products = [
         image: DarkSouls1,
         product: "Dark Souls 1",
         category: "juegos",
-        description: "Primer juego",
+        description: "Primer juego de la saga Souls.",
         price: 600,
         stock: 50,
         initial: 1,
         config: {
-            consola: ['PC', 'PlayStation', 'XBox']
+            consola: ['PC, ', 'PlayStation, ', 'XBox']
         }
     },
 
@@ -66,7 +66,7 @@ export const products = [
     },
 
     {
-        id : 3,
+        id : 5,
         image: EldenRings,
         product: "Dark Souls 1",
         category: "juegos",
