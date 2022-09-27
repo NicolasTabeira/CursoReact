@@ -1,4 +1,5 @@
 import { VStack, Text, Image, Flex, Box, Spacer} from "@chakra-ui/react"
+import { ItemCount } from '../ItemCount'
 
 
 const ItemDetail = ({listProduct}) => {
@@ -11,18 +12,15 @@ const ItemDetail = ({listProduct}) => {
             <Box>
                 <Image src={listProduct.image} alt={listProduct.product} w="200px"/>
             </Box>
+            <Spacer/>
             <Box>
-            <Text fontSize='35px' as='b'>{listProduct.product}</Text>
-            <Spacer/>
-            <Text>{listProduct.description}</Text>
-            <Spacer/>
-            <Text as='b' color='red'>${listProduct.price}</Text>
-            <Spacer/>
-            <Text>Stock: {listProduct.stock}</Text>
-            <Spacer/>
-            <Text as='u'>Consolas: </Text>
-            <Spacer/>
-            <Text color='green'>{listProduct.config.consola}</Text>
+                <Text fontSize='35px' as='b'>{listProduct.product}</Text>
+                <Text>{listProduct.description}</Text>
+                <Text as='b' color='red'>${listProduct.price}</Text>
+                <Text>Stock: {listProduct.stock}</Text>
+                <Text as='u'>Consolas: </Text>
+                <Text color='green'>{listProduct.config.consola}</Text>
+                <ItemCount initial={1} stock={listProduct.stock} onAdd= {() => {}}/> 
             </Box>
             </Flex>
         </VStack>

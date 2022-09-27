@@ -3,6 +3,8 @@ import  DarkSouls1Remastered  from '../Assets/DarkSouls1Remastered.jpg';
 import  DarkSouls2  from '../Assets/DarkSouls2.jpg';
 import  DarkSouls3  from '../Assets/DarkSouls3.jpg';
 import  EldenRings  from '../Assets/EldenRings.jpg';
+import  DLC1 from '../Assets/DLC1.jpg';
+import  Figura1 from '../Assets/Figura1.jpg';
 
 
 
@@ -33,7 +35,7 @@ export const products = [
         stock: 50,
         initial: 1,
         config: {
-            consola: ['PC', 'PlayStation', 'XBox']
+            consola: ['PC, ', 'PlayStation, ', 'XBox']
         }
     },
 
@@ -47,7 +49,7 @@ export const products = [
         stock: 50,
         initial: 1,
         config: {
-            consola: ['PC', 'PlayStation', 'XBox']
+            consola: ['PC, ', 'PlayStation, ', 'XBox']
         }
     },
 
@@ -61,7 +63,7 @@ export const products = [
         stock: 50,
         initial: 1,
         config: {
-            consola: ['PC', 'PlayStation', 'XBox']
+            consola: ['PC, ', 'PlayStation, ', 'XBox']
         }
     },
 
@@ -75,9 +77,37 @@ export const products = [
         stock: 50,
         initial: 1,
         config: {
-            consola: ['PC', 'PlayStation', 'XBox']
+            consola: ['PC, ', 'PlayStation, ', 'XBox']
+        }
+    }, 
+    
+    {
+        id : 6,
+        image: DLC1,
+        product: "Dark Souls 1",
+        category: "dlc",
+        description: "DLC de Artorias (DarkSolus 1)",
+        price: 200,
+        stock: 25,
+        initial: 1,
+        config: {
+            consola: ['PC, ', 'PlayStation, ', 'XBox']
+        }
+    },
+    {
+        id : 7,
+        image: Figura1,
+        product: "Dark Souls 1",
+        category: "figuras",
+        description: "Figura coleccionable de Artorias ",
+        price: 750,
+        stock: 30,
+        initial: 1,
+        config: {
+            consola: ["xxxxx"]
         }
     }
+
 
 
 ]
