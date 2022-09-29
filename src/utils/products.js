@@ -97,7 +97,7 @@ export const products = [
     {
         id : 7,
         image: Figura1,
-        product: "Dark Souls 1",
+        product: "Figura de Artorias",
         category: "figuras",
         description: "Figura coleccionable de Artorias ",
         price: 750,

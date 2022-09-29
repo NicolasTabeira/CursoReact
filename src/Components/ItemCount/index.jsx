@@ -13,7 +13,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
             <Button colorScheme='red' onClick={decrease}>-</Button>
             <Text>{count}</Text>
             <Button colorScheme='red' onClick={increase}>+</Button>
-            <Button colorScheme='red'>Agregar al carrito</Button>
+            <Button colorScheme='red' onClick={onAdd}>Agregar al carrito</Button>
         </HStack>
     )
 

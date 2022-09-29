@@ -1,10 +1,18 @@
-import { VStack, Text, Image, Flex, Box, Spacer} from "@chakra-ui/react"
+import { VStack, Text, Image, Flex, Box, Spacer, Button} from "@chakra-ui/react"
+import { useState } from 'react'
+import { NavLink } from "react-router-dom"
 import { ItemCount } from '../ItemCount'
+
 
 
 const ItemDetail = ({listProduct}) => {
 
-    
+
+    const [added, setAdded] = useState(false)
+
+    const onAdd = () => {
+        setAdded(true)
+    }
 
     return(
         <VStack boxShadow= 'lg' p='6' rounded='md' bg='white' m="15px" minWidth="275px">
@@ -20,7 +28,14 @@ const ItemDetail = ({listProduct}) => {
                 <Text>Stock: {listProduct.stock}</Text>
                 <Text as='u'>Consolas: </Text>
                 <Text color='green'>{listProduct.config.consola}</Text>
-                <ItemCount initial={1} stock={listProduct.stock} onAdd= {() => {}}/> 
+                {
+                    added ? 
+                    <NavLink to="/cart">
+                        <Button colorScheme='red' size='sm'>Ir al Carrito</Button>
+                    </NavLink>
+                    :
+                    <ItemCount initial={1} stock={listProduct.stock} onAdd= {onAdd}/> 
+                }
             </Box>
             </Flex>
         </VStack>
