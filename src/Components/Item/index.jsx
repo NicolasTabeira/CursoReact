@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const Item = ( {product}) => {
     return (
-        <VStack boxShadow= 'lg' p='6' rounded='md' bg='white' m="15px" minWidth="275px">
+        <VStack boxShadow= 'lg' p='6' rounded='md' bg='black' m="15px" width="275px" color='white'>
             <Image src={product.image} alt={product.product} w="100px"/>
             <Text>{product.product}</Text>
             <Text>${product.price}</Text>

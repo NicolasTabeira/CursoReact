@@ -4,7 +4,7 @@ import  DarkSouls2  from '../Assets/DarkSouls2.jpg';
 import  DarkSouls3  from '../Assets/DarkSouls3.jpg';
 import  EldenRings  from '../Assets/EldenRings.jpg';
 import  DLC1 from '../Assets/DLC1.jpg';
-import  Figura1 from '../Assets/Figura1.jpg';
+import  Figura1 from '../Assets/Figura1.png';
 
 
 

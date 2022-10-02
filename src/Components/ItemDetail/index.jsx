@@ -15,7 +15,7 @@ const ItemDetail = ({listProduct}) => {
     }
 
     return(
-        <VStack boxShadow= 'lg' p='6' rounded='md' bg='white' m="15px" minWidth="275px">
+        <VStack boxShadow= 'lg' p='6' rounded='md' bg='black' m="15px" minWidth="275px" color='white'>
             <Flex gap = '15' >
             <Box>
                 <Image src={listProduct.image} alt={listProduct.product} w="200px"/>

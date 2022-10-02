@@ -28,7 +28,15 @@ const ItemListContainer = ({greeting}) => {
 
     return (
         <>
-            <div>{greeting}</div>
+            <div style={{
+
+                backgroundColor:'grey',
+                textAlign: 'center',
+                fontSize: '30px',
+                color: 'red',
+                textShadow: 'rgba(0, 0, 0, .7) -2px 1px'
+                
+                }}>{greeting}</div>
             {!loading
             ?
             <ItemList listProduct={listProduct}/>
