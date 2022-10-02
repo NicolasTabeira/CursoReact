@@ -1,6 +1,13 @@
+import { VStack, Center, Text, Image, Hstack, Button} from '@chakra-ui/react'
+
+
 const Cart = () => {
     return(
-        <div> Cart </div>
+        <Center>
+            <VStack>
+                Cart
+            </VStack>
+        </Center>
     )
 }
 

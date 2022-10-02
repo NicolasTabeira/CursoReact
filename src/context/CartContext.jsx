@@ -26,7 +26,7 @@ export function CartContextProvider ({ children}) {
         }
     }
 
-    const removeProduct = (id) => setCartList(cartList.filter(prod => prod.id != id))
+    const removeProduct = (id) => setCartList(cartList.filter(prod => prod.id !== id))
 
     const cleanCart = () => setCartList([])
 
@@ -44,7 +44,8 @@ export function CartContextProvider ({ children}) {
             removeProduct,
             cleanCart,
             totalPrice,
-            totalQuantity
+            totalQuantity,
+            cartList
         }}>
             {children}
         </CartContext.Provider>

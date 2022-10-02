@@ -9,8 +9,7 @@ const ItemList = ({listProduct}) => {
 
     return (
         <div style = {{
-            backgroundColor: 'grey',
-            backgroundSize: 'cover'
+            backgroundColor: 'grey'
         }}>
             <Grid templateColumns= 'repeat(3, 1fr)' gap={10} justifyItems='center' >
                 {listProduct.map(product => <Item key={product.id} product= {product}/>)}
