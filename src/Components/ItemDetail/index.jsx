@@ -12,13 +12,12 @@ const ItemDetail = ({listProduct}) => {
 
 
     const [added, setAdded] = useState(false)
-    const { addToCart, cartList } = useCartContext()
+    const { addToCart } = useCartContext()
 
     const onAdd = (quantity) => {
         addToCart(listProduct, quantity)
         setAdded(true)
     }
-    console.log(addToCart)
 
     return(
         <VStack boxShadow= 'lg' p='6' rounded='md' bg='black' m="15px" minWidth="275px" color='white'>

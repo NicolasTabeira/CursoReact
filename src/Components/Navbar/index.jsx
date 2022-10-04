@@ -7,7 +7,7 @@ const Navbar = () => {
     return(
         <HStack style={{
             backgroundColor: 'black',
-            padding: '20px',
+            padding: '5px',
             color: 'red',
             fontSize: '30px',
             textShadow: 'rgba(140, 140, 140, .7) -2px 1px'
@@ -21,14 +21,14 @@ const Navbar = () => {
             <Spacer/>        
             <HStack>
                 <NavLink to="category/juegos">
-                    <Link>Juegos / </Link>
+                    <Link>Juegos  </Link>
                 </NavLink>
                 
                 <NavLink to="category/dlc">
-                    <Link>DLC / </Link>
+                    <Link>DLC  </Link>
                 </NavLink>
                 <NavLink to="category/figuras">
-                    <Link>Figuras / </Link>
+                    <Link>Figuras  </Link>
                 </NavLink>
                 <CartWidget/>
             </HStack>
