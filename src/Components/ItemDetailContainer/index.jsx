@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Text } from '@chakra-ui/react'
-import { products } from '../../utils/products'
-import { customFetch } from '../../utils/customFetch'
 import { ItemDetail } from '../ItemDetail'
 import { useParams } from 'react-router-dom'
+import { db } from '../../firebase/firebase'
+import { doc, getDoc, collection} from 'firebase/firestore'
 
 
 
@@ -11,21 +10,25 @@ import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
 
-    const [listProduct, setListProduct] = useState({})
-    const [loading, setLoading] = useState(true)
-
+    const [product, setProduct] = useState({})
     const { id } = useParams()
 
     useEffect (() => {
-        customFetch(products)
-            .then(res => {
-                setLoading(false)
-                setListProduct(res.find(item => item.id === parseInt(id)))
-            })
+        const productCollection = collection(db, 'ListaDeProductos')
+        const refDoc = doc(productCollection, id)
+        getDoc(refDoc)
+        .then((result) => {
+            setProduct(
+                {
+                    id: result.id,
+                    ...result.data(),
+                }
+            )
+        })
     }, [id])
     return(
         <>
-            {!loading ? <ItemDetail listProduct={listProduct}/> : <Text>Cargando...</Text>}
+            <ItemDetail listProduct={product}/>
         </>
     )
 }

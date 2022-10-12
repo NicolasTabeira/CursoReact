@@ -8,7 +8,7 @@ import { useCartContext } from '../../context/CartContext'
 
 const ItemDetail = ({listProduct}) => {
 
-    const { image, product, price, stock, config, description, initial } = listProduct
+    const { image, product, price, stock, description, initial } = listProduct
 
 
     const [added, setAdded] = useState(false)
@@ -31,8 +31,6 @@ const ItemDetail = ({listProduct}) => {
                 <Text>{description}</Text>
                 <Text as='b' color='red'>${price}</Text>
                 <Text>Stock: {stock}</Text>
-                <Text as='u'>Consolas: </Text>
-                <Text color='green'>{config.consola}</Text>
                 {
                     added ? 
                     <NavLink to="/cart">

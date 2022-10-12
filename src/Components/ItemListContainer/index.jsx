@@ -1,29 +1,30 @@
-import { Text } from '@chakra-ui/react'
 import { ItemList } from '../ItemList'
-import { products } from '../../utils/products'
-import { customFetch } from '../../utils/customFetch'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { db } from '../../firebase/firebase'
+import { getDocs, collection, query, where } from 'firebase/firestore'
 
 const ItemListContainer = ({greeting}) => {
 
     const [listProduct, setListProduct] = useState ([])
-    const [loading, setLoading] = useState(true)
 
     const {category} = useParams()
 
     useEffect (() => {
-        setLoading(true)
-        customFetch(products)
-            .then(res => { 
-                if (category) {
-                    setLoading(false)
-                    setListProduct(res.filter(prod => prod.category === category))
-                } else {
-                    setLoading(false)
-                    setListProduct(res)
-                }                
+        let productsCollection = collection(db, 'ListaDeProductos')
+        if (category) {
+            productsCollection = query(productsCollection, where('category', '==', category))
+        }
+        getDocs(productsCollection)
+        .then((data) => {
+            const lista = data.docs.map((product) => {
+                return {
+                    ...product.data(),
+                    id: product.id
+                }
             })
+            setListProduct(lista)
+        })
     }, [category])
 
     return (
@@ -37,11 +38,8 @@ const ItemListContainer = ({greeting}) => {
                 textShadow: 'rgba(0, 0, 0, .7) -2px 1px'
                 
                 }}>{greeting}</div>
-            {!loading
-            ?
+            {
             <ItemList listProduct={listProduct}/>
-            :
-            <Text>Cargando...</Text>
 
             }
         </>
