@@ -8,6 +8,8 @@ const ItemCount = ({initial, stock, onAdd}) => {
     const increase = () => count < stock && setCount(count + 1)
     const decrease = () => count > initial && setCount (count - 1)
 
+    console.log(initial, stock);
+
 
     return (
         <HStack>

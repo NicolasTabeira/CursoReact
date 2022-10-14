@@ -18,7 +18,7 @@ const ItemDetail = ({listProduct}) => {
         addToCart(listProduct, quantity)
         setAdded(true)
     }
-
+    
     return(
         <VStack boxShadow= 'lg' p='6' rounded='md' bg='black' m="15px" minWidth="275px" color='white'>
             <Flex gap = '15' >
@@ -37,7 +37,7 @@ const ItemDetail = ({listProduct}) => {
                         <Button colorScheme='red' size='sm'>Ir al Carrito</Button>
                     </NavLink>
                     :
-                    <ItemCount initial={initial} stock={stock} onAdd= {onAdd}/> 
+                    <ItemCount initial={initial} stock={stock} onAdd={onAdd}/> 
                 }
             </Box>
             </Flex>
