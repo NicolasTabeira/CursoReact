@@ -19,6 +19,7 @@ const ItemDetail = ({listProduct}) => {
         setAdded(true)
     }
     
+    
     return(
         <VStack boxShadow= 'lg' p='6' rounded='md' bg='black' m="15px" minWidth="275px" color='white'>
             <Flex gap = '15' >
@@ -31,6 +32,7 @@ const ItemDetail = ({listProduct}) => {
                 <Text>{description}</Text>
                 <Text as='b' color='red'>${price}</Text>
                 <Text>Stock: {stock}</Text>
+                
                 {
                     added ? 
                     <NavLink to="/cart">

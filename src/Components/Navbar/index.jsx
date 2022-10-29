@@ -1,4 +1,4 @@
-import {HStack, Spacer, Link, Text, Input } from '@chakra-ui/react'
+import {HStack, Spacer, Link, Text} from '@chakra-ui/react'
 import logo from '../../Assets/logoDS.png'
 import { CartWidget } from '../CartWidget'
 import { NavLink } from "react-router-dom"
@@ -20,9 +20,6 @@ const Navbar = () => {
             <Spacer/>
             <Text fontSize='50px' as='b' > Bienvenidos! </Text>
             <Spacer/>
-            <Input id="input_1" placeholder='Nombre.' htmlSize={8} width='auto' />
-            <Input id="input_2" placeholder='Apellido.' htmlSize={8} width='auto' />
-            <Input id="input_3" placeholder='E-mail.' htmlSize={8} width='auto' />
             <HStack>
                 <NavLink to="category/juegos">
                     <Link>Juegos  </Link>

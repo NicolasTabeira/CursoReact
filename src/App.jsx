@@ -19,7 +19,7 @@ function App() {
                         <Route path="/product/:id" element={<ItemDetailContainer/>}/>
                         <Route path="/cart"   element={<Cart/>}/>               
                     </Routes>  
-                </CartContextProvider>    
+                </CartContextProvider>
             </BrowserRouter>
         </ChakraProvider>
     )
